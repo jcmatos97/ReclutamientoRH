@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ReclutamientoRHModelStoreContainer" CdmEntityContainer="ReclutamientoRHEntities">
+    <EntitySetMapping Name="Candidatos">
+      <EntityTypeMapping TypeName="ReclutamientoRHModel.Candidato">
+        <MappingFragment StoreEntitySet="Candidatos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="SalarioAspiracion" ColumnName="SalarioAspiracion" />
+          <ScalarProperty Name="RecomendadoPor" ColumnName="RecomendadoPor" />
+          <ScalarProperty Name="IdPuesto" ColumnName="IdPuesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CandidatosSabenIdiomas">
+      <EntityTypeMapping TypeName="ReclutamientoRHModel.CandidatosSabenIdioma">
+        <MappingFragment StoreEntitySet="CandidatosSabenIdiomas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCandidato" ColumnName="IdCandidato" />
+          <ScalarProperty Name="IdIdioma" ColumnName="IdIdioma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CandidatosTienenCompetencias">
+      <EntityTypeMapping TypeName="ReclutamientoRHModel.CandidatosTienenCompetencia">
+        <MappingFragment StoreEntitySet="CandidatosTienenCompetencias">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCandidato" ColumnName="IdCandidato" />
+          <ScalarProperty Name="IdCompetencia" ColumnName="IdCompetencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Capacitaciones">
+      <EntityTypeMapping TypeName="ReclutamientoRHModel.Capacitacione">
+        <MappingFragment StoreEntitySet="Capacitaciones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Nivel" ColumnName="Nivel" />
+          <ScalarProperty Name="FechaDesde" ColumnName="FechaDesde" />
+          <ScalarProperty Name="FechaHasta" ColumnName="FechaHasta" />
+          <ScalarProperty Name="Institucion" ColumnName="Institucion" />
+          <ScalarProperty Name="IdCandidato" ColumnName="IdCandidato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Competencias">
+      <EntityTypeMapping TypeName="ReclutamientoRHModel.Competencia">
+        <MappingFragment StoreEntitySet="Competencias">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleados">
+      <EntityTypeMapping TypeName="ReclutamientoRHModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleados">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="Salario" ColumnName="Salario" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdCandidato" ColumnName="IdCandidato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExperienciaLaborals">
+      <EntityTypeMapping TypeName="ReclutamientoRHModel.ExperienciaLaboral">
+        <MappingFragment StoreEntitySet="ExperienciaLaboral">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="Puesto" ColumnName="Puesto" />
+          <ScalarProperty Name="FechaDesde" ColumnName="FechaDesde" />
+          <ScalarProperty Name="FechaHasta" ColumnName="FechaHasta" />
+          <ScalarProperty Name="Salario" ColumnName="Salario" />
+          <ScalarProperty Name="IdCandidato" ColumnName="IdCandidato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Idiomas">
+      <EntityTypeMapping TypeName="ReclutamientoRHModel.Idioma">
+        <MappingFragment StoreEntitySet="Idiomas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Puestos">
+      <EntityTypeMapping TypeName="ReclutamientoRHModel.Puesto">
+        <MappingFragment StoreEntitySet="Puestos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="NivelDeRiesgo" ColumnName="NivelDeRiesgo" />
+          <ScalarProperty Name="NivelMinSalario" ColumnName="NivelMinSalario" />
+          <ScalarProperty Name="NivelMaxSalario" ColumnName="NivelMaxSalario" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

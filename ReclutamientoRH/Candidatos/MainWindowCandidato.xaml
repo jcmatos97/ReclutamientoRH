@@ -1,0 +1,38 @@
+﻿<Window x:Class="ReclutamientoRH.Candidatos.MainWindowCandidato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReclutamientoRH.Candidatos"
+        mc:Ignorable="d"        Title="ReclutamientoRH" Height="480" Width="720"
+        ResizeMode="NoResize"  
+        Icon="/Icono.ico"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="442"/>
+        </Grid.RowDefinitions>
+        <Menu Background="White" Grid.Row="0">
+            <MenuItem Header = "Inicio" Click="MenuItem_Click"></MenuItem>
+            <MenuItem Header = "Gestion">
+                <MenuItem Click="MenuItem_Click_1" Header = "Competencias" HorizontalAlignment = "Left" Width = "200" />
+                <MenuItem Click="MenuItem_Click_2" Header = "Idiomas" HorizontalAlignment = "Left" Width = "200" />
+                <MenuItem Click="MenuItem_Click_3" Header = "Capacitaciones" HorizontalAlignment = "Left" Width = "200" />
+                <MenuItem Click="MenuItem_Click_4" Header = "Experiencia" HorizontalAlignment = "Left" Width = "200" />
+            </MenuItem>
+            <MenuItem Header = "Perfil">
+                <MenuItem Click="MenuItem_Click_5" Header = "Datos Personales" HorizontalAlignment = "Left" Width = "240" />
+                <MenuItem Click="MenuItem_Click_6" Header = "Datos de Vacante Solicitada" HorizontalAlignment = "Left" Width = "240" />
+            </MenuItem>
+
+            <MenuItem Header = "Ayuda">
+                <MenuItem Click="MenuItem_Click_7" Header = "Acerca de ReclutamientoRH" HorizontalAlignment = "Left" Width = "240" />
+            </MenuItem>
+        </Menu>
+        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" x:Name="CandidatoMainFrame">
+            
+        </Frame>
+    </Grid>
+</Window>

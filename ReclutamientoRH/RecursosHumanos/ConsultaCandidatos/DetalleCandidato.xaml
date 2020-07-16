@@ -1,0 +1,21 @@
+﻿<Window Loaded="onLoad"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReclutamientoRH.RecursosHumanos.ConsultaCandidatos"
+        xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer" x:Class="ReclutamientoRH.RecursosHumanos.ConsultaCandidatos.DetalleCandidato"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResize"
+        Title="Detalle del Candidato"
+        WindowState="Maximized"
+        ShowInTaskbar="False"
+        Icon="/Icono.ico"
+        >
+    <Grid>
+
+        <Viewer:CrystalReportsViewer Height="AUTO" Width="AUTO" ShowRefreshButton="False" ShowToggleSidePanelButton="False" ShowCopyButton="False"  Name="Visualizador" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" />
+
+    </Grid>
+</Window>

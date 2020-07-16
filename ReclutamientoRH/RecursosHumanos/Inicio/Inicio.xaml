@@ -1,0 +1,20 @@
+﻿<Page x:Class="ReclutamientoRH.RecursosHumanos.Inicio.Inicio"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ReclutamientoRH.RecursosHumanos.Inicio"
+      mc:Ignorable="d" 
+      d:DesignHeight="462" d:DesignWidth="720"
+      Title="Inicio"
+      Background="White"
+      >
+
+    <Grid>
+        <Label FontWeight="Thin"  FontStyle="Italic"  Content="¡Bienvenido a ReclutamientoRH!" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <TextBlock FontWeight="Thin" Width="650" FontSize="20" HorizontalAlignment="Left" Margin="20,0,0,200" Text="• El mejor software de gestión de recursos humanos con un eficiente proceso de seleccion de candidatos" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <TextBlock FontWeight="Thin" Width="650" FontSize="20" HorizontalAlignment="Left" Margin="20,0,0,50" Text="• Agregue y Personalice las Competencias, Idiomas y Puestos Vacantes" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <TextBlock FontWeight="Thin" Width="650" FontSize="20" HorizontalAlignment="Left" Margin="20,100,0,0" Text="• Para más información sobre la versión del sistema, haga click en 'Ayuda' y luego seleccione 'Acerca de ReclutamientoRH'" TextWrapping="Wrap" VerticalAlignment="Center"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3B5B993-3DA5-4351-9FF7-ACD58C407DA6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ReclutamientoRH</RootNamespace>
+    <AssemblyName>ReclutamientoRH</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="sapbusinessobjects.wpf.viewer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Candidatos\Capacitaciones\Capacitaciones.xaml.cs">
+      <DependentUpon>Capacitaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\Capacitaciones\capacitacionesAddUpdate.xaml.cs">
+      <DependentUpon>capacitacionesAddUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\Competencias\Competencias.xaml.cs">
+      <DependentUpon>Competencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\DatosPersonales\DatosPersonales.xaml.cs">
+      <DependentUpon>DatosPersonales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\DatosPersonales\editarClave.xaml.cs">
+      <DependentUpon>editarClave.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\DatosPersonales\EditarClaveFinal.xaml.cs">
+      <DependentUpon>EditarClaveFinal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\DatosPersonales\EditarClaveInicio.xaml.cs">
+      <DependentUpon>EditarClaveInicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\DatosPersonales\editarDatosPersonales.xaml.cs">
+      <DependentUpon>editarDatosPersonales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\DatosVacante\DatosVacante.xaml.cs">
+      <DependentUpon>DatosVacante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\DatosVacante\editarDatosVacante.xaml.cs">
+      <DependentUpon>editarDatosVacante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\Experiencia\Experiencia.xaml.cs">
+      <DependentUpon>Experiencia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\Experiencia\experienciaAddUpdate.xaml.cs">
+      <DependentUpon>experienciaAddUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\Idiomas\Idiomas.xaml.cs">
+      <DependentUpon>Idiomas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\Inicio\Inicio.xaml.cs">
+      <DependentUpon>Inicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Candidatos\MainWindowCandidato.xaml.cs">
+      <DependentUpon>MainWindowCandidato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\Candidato.cs">
+      <DependentUpon>DatabaseRH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\CandidatosSabenIdioma.cs">
+      <DependentUpon>DatabaseRH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\CandidatosTienenCompetencia.cs">
+      <DependentUpon>DatabaseRH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\Capacitacione.cs">
+      <DependentUpon>DatabaseRH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\Competencia.cs">
+      <DependentUpon>DatabaseRH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\DatabaseRH.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseRH.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\DatabaseRH.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseRH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\DatabaseRH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseRH.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\Empleado.cs">
+      <DependentUpon>DatabaseRH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\ExperienciaLaboral.cs">
+      <DependentUpon>DatabaseRH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\Idioma.cs">
+      <DependentUpon>DatabaseRH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataContext\Puesto.cs">
+      <DependentUpon>DatabaseRH.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Cedula.cs" />
+    <Compile Include="Helpers\NumericTextBox.cs" />
+    <Compile Include="RecursosHumanos\Competencias\Competencias.xaml.cs">
+      <DependentUpon>Competencias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\Competencias\CompetenciasAddUpdate.xaml.cs">
+      <DependentUpon>CompetenciasAddUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\ConsultaCandidatos\ConsultaCandidatos.xaml.cs">
+      <DependentUpon>ConsultaCandidatos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\ConsultaCandidatos\DetalleCandidato.xaml.cs">
+      <DependentUpon>DetalleCandidato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\ConsultarEmpleados\ConsultarEmpleados.xaml.cs">
+      <DependentUpon>ConsultarEmpleados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\ConsultarEmpleados\DetalleEmpleado.xaml.cs">
+      <DependentUpon>DetalleEmpleado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\Idiomas\Idiomas.xaml.cs">
+      <DependentUpon>Idiomas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\Idiomas\IdiomasAddUpdate.xaml.cs">
+      <DependentUpon>IdiomasAddUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\Inicio\Inicio.xaml.cs">
+      <DependentUpon>Inicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\ProcesoSeleccion\ProcesoSeleccionCandidato.xaml.cs">
+      <DependentUpon>ProcesoSeleccionCandidato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\ProcesoSeleccion\ProcesoSeleccionDatos.xaml.cs">
+      <DependentUpon>ProcesoSeleccionDatos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\ProcesoSeleccion\ProcesoSeleccionFinal.xaml.cs">
+      <DependentUpon>ProcesoSeleccionFinal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\ProcesoSeleccion\ProcesoSeleccionInicio.xaml.cs">
+      <DependentUpon>ProcesoSeleccionInicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\Puestos\Puestos.xaml.cs">
+      <DependentUpon>Puestos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\Puestos\puestosAddUpdate.xaml.cs">
+      <DependentUpon>puestosAddUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\Registro.xaml.cs">
+      <DependentUpon>Registro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\RegistroDatosPersonales.xaml.cs">
+      <DependentUpon>RegistroDatosPersonales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\RegistroFinal.xaml.cs">
+      <DependentUpon>RegistroFinal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\RegistroInicio.xaml.cs">
+      <DependentUpon>RegistroInicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\RegistroPuesto.xaml.cs">
+      <DependentUpon>RegistroPuesto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DetalleCandidato.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DetalleCandidato.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\EmpleadosPorFecha.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpleadosPorFecha.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewModels\Candidato.cs" />
+    <Compile Include="ViewModels\Capacitaciones.cs" />
+    <Compile Include="ViewModels\Competencia.cs" />
+    <Compile Include="ViewModels\Experiencia.cs" />
+    <Compile Include="ViewModels\Idioma.cs" />
+    <Compile Include="ViewModels\Puesto.cs" />
+    <Page Include="Candidatos\Capacitaciones\Capacitaciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\Capacitaciones\capacitacionesAddUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\Competencias\Competencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\DatosPersonales\DatosPersonales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\DatosPersonales\editarClave.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\DatosPersonales\EditarClaveFinal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\DatosPersonales\EditarClaveInicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\DatosPersonales\editarDatosPersonales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\DatosVacante\DatosVacante.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\DatosVacante\editarDatosVacante.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\Experiencia\Experiencia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\Experiencia\experienciaAddUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\Idiomas\Idiomas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\Inicio\Inicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Candidatos\MainWindowCandidato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="RecursosHumanos\Competencias\Competencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\Competencias\CompetenciasAddUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\ConsultaCandidatos\ConsultaCandidatos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\ConsultaCandidatos\DetalleCandidato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\ConsultarEmpleados\ConsultarEmpleados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\ConsultarEmpleados\DetalleEmpleado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\Idiomas\Idiomas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\Idiomas\IdiomasAddUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\Inicio\Inicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\ProcesoSeleccion\ProcesoSeleccionCandidato.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\ProcesoSeleccion\ProcesoSeleccionDatos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\ProcesoSeleccion\ProcesoSeleccionFinal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\ProcesoSeleccion\ProcesoSeleccionInicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\Puestos\Puestos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RecursosHumanos\Puestos\puestosAddUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registro\Registro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registro\RegistroDatosPersonales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registro\RegistroFinal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registro\RegistroInicio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registro\RegistroPuesto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\DetalleCandidato.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DetalleCandidato.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\EmpleadosPorFecha.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmpleadosPorFecha.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="DataContext\DatabaseRH.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DatabaseRH.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataContext\DatabaseRH.edmx.diagram">
+      <DependentUpon>DatabaseRH.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icono.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DataContext\DatabaseRH.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DatabaseRH.Context.cs</LastGenOutput>
+      <DependentUpon>DatabaseRH.edmx</DependentUpon>
+    </Content>
+    <Content Include="DataContext\DatabaseRH.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DatabaseRH.edmx</DependentUpon>
+      <LastGenOutput>DatabaseRH.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

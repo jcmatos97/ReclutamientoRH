@@ -1,0 +1,30 @@
+﻿<Window x:Class="ReclutamientoRH.Candidatos.DatosVacante.editarDatosVacante"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReclutamientoRH.Candidatos.DatosVacante"
+        xmlns:helper="clr-namespace:ReclutamientoRH.Helpers"
+        mc:Ignorable="d"
+        Icon="/Icono.ico"
+        Title="Datos de la Vacante" 
+        Height="250" Width="320"
+        ResizeMode="NoResize"    
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125"/>
+            <RowDefinition Height="125"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="recomendadopor" MaxLines="1" HorizontalAlignment="Left" Margin="120,0,0,125" Grid.Row="0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="170" Grid.RowSpan="2" MaxLength="30"/>
+        <helper:NumericTextBox x:Name="aspiracion" MaxLines="1" HorizontalAlignment="Left" Margin="120,60,0,125" Grid.Row="0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="170" Grid.RowSpan="2" IsDecimalAllowed="True" MaxLength="20" Scale="2" IsEnabled="True" HorizontalContentAlignment="Right"/>
+        <Label Content="Recomendado por: " HorizontalAlignment="Right" Margin="0,50,181,49" Grid.Row="0" VerticalAlignment="Center" Width="113"/>
+        <Label Content="Aspiración (Salario):" HorizontalAlignment="Right" Margin="0,80,181,19" Grid.Row="0" VerticalAlignment="Center" Width="116"/>
+        <Label Name="Info" Content="Modifique los Datos de la Vacante Solicitada:" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Button Name="editarButton" Content="Editar" HorizontalAlignment="Center" Margin="0,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="editar"/>
+        <Button Content="Cancelar" HorizontalAlignment="Center" Margin="0,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="cancelar"/>
+        <!--
+        -->
+    </Grid>
+</Window>
